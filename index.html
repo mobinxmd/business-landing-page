@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>Home</title>
+</head>
+
+<style>
+    html,body{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,700;1,300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap');
+    .text-danger{
+        -webkit-text-fill-color: #FF0000;
+    }
+    .btn-danger{
+        background: #FF0000;
+    }
+    .bg-dark{
+        background-color: #000000;
+    }
+    .input-g{
+        position: relative;
+    }
+    .place{
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        color: #3a86ff;
+        transition: 0.2s;
+        
+    }
+    .input:focus + .place{
+        top: -12px;
+        font-size: smaller;
+        background-color: white;
+        padding-left: 5px;
+        padding-right: 5px;
+       
+    }
+   
+    .input:focus{
+        box-shadow: none;
+    }
+    
+
+  
+ 
+</style>
+<body style="font-family: 'poppins';">
+    <div class="Overall-container">
+
+            <!----- Navbar ------->
+
+            <nav class="navbar navbar-expand-lg navbar-dark border-bottom border-secondary border-opacity-25" style="background: #000000;">
+                <div id="home" class="container p-2">
+                 <div>
+                    <a href="#" class="navbar-brand fw-bold">VANE<span class="text-danger">VPN</span></a>
+                 </div>
+                
+                <button 
+                    type="button"
+                    class="navbar-toggler btn"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                    data-bs-target="#navbar-content"
+                    aria-controls="navbar-content">
+
+                    <span class="navbar-toggler-icon"></span>
+                                
+                </button>
+                <div class="navbar-collapse collapse"
+                    id="navbar-content">
+
+                    <ul class="navbar-nav me-lg-auto ms-lg-auto gap-lg-4">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="true" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#features" class="nav-link">Feature</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#plans" class="nav-link">Plans</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                    <form>
+                        <a href="#" 
+                            class="btn btn-transparent text-white btn-sm"
+                            data-bs-toggle="modal"
+                            data-bs-target="#signin-modal">
+                            Sign in
+                        </a>
+                        <a href="#" class="btn btn-danger btn-sm btn-normal-lg"
+                            data-bs-toggle="modal"
+                            data-bs-target="#signup-modal">
+                            Sign up
+                        </a>
+                    </form>
+                </div>
+
+              
+            </div>
+        </nav>
+
+        <!----- Navbar End ------->
+
+        <!----- Sign up Modal ------->
+            <div class="modal fade "
+                id="signup-modal"
+                tabindex="0"
+                aria-hidden="true"
+                data-bs-backdrop="static"
+                style="backdrop-filter: blur(15px);">
+                <div class="modal-dialog modal-dialog-centered ">
+                    <div class="modal-content">
+                       
+                        <div class="modal-body">
+                            <button class="btn-close float-end opacity-25" data-bs-dismiss="modal"></button>
+                            <div>
+                                <div class="row  p-3">
+                                    <div class="text-center"> 
+                                        <h4><strong>Create An Account</strong></h4>
+                                        <p><small>Let's get started with your 30 days free trial.</small></p>
+                                    </div>
+                                    <div>
+                                        <form class="">
+                                            <div class="input-g mb-3">
+                                                <input type="text" id="u_name" class="form-control input">
+                                                <label for="u_name" class="form-label place">Username</label>
+                                            </div>
+                                            <div class="input-g mb-3">
+                                                <input type="email" id="u_email" class="form-control input">
+                                                <label for="u_email" class="form-label place">Email ID</label>
+                                            </div>
+                                            <div class="input-g mb-4">
+                                                <input type="password" id="password" class="form-control input">
+                                                <label for="password" class="form-label place">Password</label>
+                                            </div>
+                                            <div class="input-g mb-2">
+                                                <button type="submit" class="btn btn-primary w-100">Sign up</button>
+                                            </div>
+                                            <div class="input-g mb-4 text-center">
+                                                <span class="text-muted small"><small>Already have an account?</small> 
+                                                    <a class="text-decoration-none small" href="#" 
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#signin-modal">Sign in</a></span>
+                                            </div>
+                                            <hr>
+                                            <div class="input-g  text-center">
+                                                <span class="text-muted small opacity-75"><small>By signing up to create an account I accept company's<br></small> 
+                                                    <a class="text-decoration-none small" href="#">Terms of use and Privacy Policy</a></span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!----- Sign up Modal End------->
+
+         <!----- Sign in Modal ------->
+         <div class="modal fade"
+         id="signin-modal"
+         tabindex="0"
+         aria-hidden="true"
+         data-bs-backdrop="static"
+         style="backdrop-filter: blur(15px);">
+         <div class="modal-dialog modal-dialog-centered ">
+             <div class="modal-content">
+                
+                 <div class="modal-body">
+                     <button class="btn-close float-end opacity-25" data-bs-dismiss="modal"></button>
+                     <div>
+                         <div class="row  p-3">
+                             <div class="text-center"> 
+                                 <h4><strong>Sign in To Your Account</strong></h4>
+                                 <p><small>Access new features now.</small></p>
+                             </div>
+                             <div>
+                                 <form class="">
+                                     <div class="input-g mb-3">
+                                         <input type="email" id="u_email" class="form-control input">
+                                         <label for="u_email" class="form-label place">Email ID</label>
+                                     </div>
+                                     <div class="input-g mb-4">
+                                         <input type="password" id="password" class="form-control input">
+                                         <label for="password" class="form-label place">Password</label>
+                                     </div>
+                                     <div class="input-g mb-2">
+                                         <button type="submit" class="btn btn-primary w-100">Sign in</button>
+                                     </div>
+                                     <div class="input-g mb-3 text-center">
+                                         <span class="text-muted small"><small>Do not have an account?</small> 
+                                            <a class="text-decoration-none small" 
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#signup-modal" href="#">Create an Account</a></span>
+                                     </div>
+                                  
+                                   
+                                 </form>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+ <!----- Sign in Modal End------->
+
+
+        <!----- Home Section ------->
+
+            <section id="section-home" class="container-fluid " style="background: #000000; background-image: url(images/smart-city-security-background.png); background-size: cover;">
+                
+                <div class="container d-flex py-5 justify-content-center">
+                    <div class="row mainRow justify-content-center ">
+                        <div class="col-lg-7">
+                            <div class="row mb-4">
+                             <h1 class="display-5 text-white fw-bold lh-base">Get Fast and Reliable VPN Service with <br> 
+                                 <span class="text-danger">VANE VPN</span></h1>
+                            </div>
+                             <div class="row col-lg-10 mb-4">
+                                 <p class="text-white small lg-base">PROTECT ALL YOUR DEVICES Provide a network for all your needs 
+                                     with ease and fun using Wale VPN discover interesting features.</p>
+                             </div>
+                                <div class="d-flex d-lg-block justify-content-center">
+                                    <button class="btn btn-danger btn-lg btn-sm mb-5 px-lg-3 py-lg-2 "><strong>DOWNLOAD NOW</strong></button>
+                                </div>
+         
+                         </div>
+                         <div class="col-lg-5 col-8" > 
+                            <img class="img-fluid" src="images/OBJECTS_copy.svg" alt="">
+                         </div>
+                    </div>
+                </div>
+                
+            </section>
+
+            <!----- Home Section End------->
+
+            <!----- Features Section ------->
+
+            <section class="text-white" style="background-color: #000000;">
+                <div class="row justify-content-center p-5 border-top border-bottom border-secondary border-opacity-25 ">
+                    <div class="col-lg-3 p-4 position-relative d-flex align-items-center ">
+                        <span class="h1 me-3"><i class="bi bi-check-circle-fill"></i></span> 
+                        <p class="h5">HIGH SPEED</p>
+                    </div>
+                    <div class="col-lg-3 p-4 d-flex align-items-center ">
+                        <span class="h1 me-3"><i class="bi bi-check-circle-fill"></i></span>
+                        <p class="h5">UNLIMITED DEVICES</p>
+                    </div>
+                    <div class="col-lg-3 p-4 d-flex align-items-center ">
+                        <span class="h1 me-3"><i class="bi bi-check-circle-fill"></i></span>
+                        <p class="h5">HIGHLY SECURE</p>
+                    </div>
+                    <div class="col-lg-3 p-4 d-flex align-items-center ">
+                        <span class="h1 me-3"><i class="bi bi-check-circle-fill"></i></span>
+                        <p class="h5">QUICK CONNECTIVITY</p>
+                    </div>
+                </div>
+                <div id="features" class="row justify-content-center">
+                    <div class="row py-4 justify-content-center">
+                        <div class="col-4 text-center"><h2>FEATURES</h2></div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-lg-2 col-6 text-center" >
+                            <div class="ms-auto me-auto bg-light py-4 d-flex justify-content-center w-50 mb-2 rounded"><img src="images/Open-in.svg"></div>
+                            <div class="fs-5"><p>Browse privately</p></div>
+                        </div>
+                        <div class="col-lg-2 col-6 text-center">
+                            <div class="ms-auto me-auto bg-light py-4 d-flex justify-content-center w-50 mb-2 rounded"><img style="width: 60px;" src="images/arrow-repeat.svg"></div>
+                            <div class="fs-5"><p>Bypass</p></div>
+                        </div>
+                        <div class="col-lg-2 col-6 text-center">
+                            <div class="ms-auto me-auto bg-light py-4 d-flex justify-content-center w-50 mb-2 rounded"><img style="width: 40px;" src="images/clean-bars.svg"><img class="mt-auto" style="width: 20px;" src="images/cleaner.svg"></div>
+                            <div class="fs-5"><p>Clean web</p></div>
+                        </div>
+                        <div class="col-lg-2 col-6 text-center">
+                            <div class="ms-auto me-auto bg-light py-4 d-flex justify-content-center w-50 mb-2 rounded"><img style="width: 60px; height: 65px;" src="images/box-arrow-left.svg"></div>
+                            <div class="fs-5"><p>No logging</p></div>
+                        </div>
+                        <div class="col-lg-2 col-6 text-center">
+                            <div class="ms-auto me-auto bg-light py-4 d-flex justify-content-center w-50 mb-2 rounded"><img style="width: 60px; height: 60px;" src="images/shield-check.svg"></div>
+                            <div class="fs-5"><p>Encryption</p></div>
+                        </div>
+                        <div class="col-lg-2 col-6 text-center" >
+                            <div class="ms-auto me-auto bg-light py-4 d-flex justify-content-center w-50 mb-2 rounded"><img style="width: 60px; height: 60px;" src="images/switch.svg"></div>
+                            <div class="fs-5"><p>Kill switch</p></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section  style="background: #E0DCDC;">
+                <div class="row justify-content-center p-3">
+                    <div class="col-9 col-lg-4 ">
+                        <img class="img-fluid" src="images/vpn-features.png" alt="">
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="col-10">
+                            <p class="fw-bold fs-2">We Provide Many Features You Can Use</p>
+                        </div>
+                        <div>
+                            <p class="fs-5 mb-5">You can explore the features that we provide with fun and have their own functions each feature.</p>
+                        </div>
+
+                        <div class=" py-2 position-relative d-flex align-items-center ">
+                            <span class="h3 me-3"><i style="color: #FF1203;" class="bi bi-check-circle-fill"></i></span> 
+                            <p class="h5">Powerfull online protection.</p>
+                        </div>
+                        <div class="py-2 position-relative d-flex align-items-center ">
+                            <span class="h3 me-3"><i style="color: #FF1203;" class="bi bi-check-circle-fill"></i></span> 
+                            <p class="h5">Internet without borders.</p>
+                        </div>
+                        <div class="py-2 position-relative d-flex align-items-center ">
+                            <span class="h3 me-3"><i style="color: #FF1203;" class="bi bi-check-circle-fill"></i></span> 
+                            <p class="h5">Supercharged VPN</p>
+                        </div>
+                        <div class="py-2 position-relative d-flex align-items-center ">
+                            <span class="h3 me-3"><i style="color: #FF1203;" class="bi bi-check-circle-fill"></i></span> 
+                            <p class="h5">No specific time limits.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!----- Features Section End ------->
+
+              <!----- Plans Section ------->
+
+              <section id="plans" style="background: #000000;">
+                    <div class="row justify-content-center p-5">
+                        <div class="col-lg-8 text-center">
+                            <h1 class="text-danger">Choose Your Plan</h1>
+                            <p class="text-white">Let's choose the package that is best for you and explore it happily and cheerfully.</p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center pb-5 gap-4">
+                        <div class="col-lg-2 col-md-3 col-sm-5 col-8 pb-3">
+                            <div class="card bg-light rounded-4">
+                                <div class="card-body text-center py-3">
+                                    <img class="mb-4" style="max-width: 100px;" src="images/Standard.svg">
+                                    <h3 class="pb-3">Free Plan</h3>
+
+                                    <div class="ms-2 text-start">
+                                        <div class="py-2">
+                                            <span ><i class="bi bi-check text-success"></i></span> 
+                                            <span class="small">Unlimited Bandwitch</span>
+                                            
+                                        </div>
+                                        <div class="py-2  ">
+                                            <span ><i class="bi bi-check text-success"></i></span> 
+                                            <span class="small">Encrypted Connection</span>
+                                        </div>
+                                        <div class="py-2  ">
+                                            <span ><i class="bi bi-check text-success"></i></span> 
+                                            <span class="small">No Traffic Logs</span>
+                                        </div>
+                                        <div class="py-2 pb-3">
+                                            <span ><i class="bi bi-check text-success"></i></span> 
+                                            <span class="small">Works on All Devices</span>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                                <div class="text-center pt-5">
+                                    <a class="text-decoration-none stretched-link link-dark" href="#"><h4>Free</h4></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-5 col-8 pb-3">
+                            <div class="card bg-light rounded-4 p-1">
+                                <div class="card-body text-center py-3 p-1">
+                                    <img class="mb-4" style="max-width: 100px;" src="images/Standard.svg">
+                                    <h3 class="">Standard Plan</h3>
+
+                                    <div class="ms-3 text-start">
+                                        <div class="py-2">
+                                            <span ><i class="bi bi-check text-success"></i></span> 
+                                            <span class="small">Unlimited Bandwitch</span>
+                                            
+                                        </div>
+                                        <div class="py-2  ">
+                                            <span ><i class="bi bi-check text-success"></i></span> 
+                                            <span class="small">Encrypted Connection</span>
+                                        </div>
+                                        <div class="py-2  ">
+                                            <span ><i class="bi bi-check text-success"></i></span> 
+                                            <span class="small">No Traffic Logs</span>
+                                        </div>
+                                        <div class="py-2 ">
+                                            <span ><i class="bi bi-check text-success"></i></span> 
+                                            <span class="small">Works on All Devices</span>
+                                        </div>
+                                        <div class="py-2 ">
+                                            <span ><i class="bi bi-check text-success"></i></span> 
+                                            <span class="small">Connect Anyware</span>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                                <div class="text-center pt-4">
+                                    <a class="text-decoration-none link-dark stretched-link" href="#"><h4 style="font-family: 'Rubik', sans-serif;">
+                                    <small><strong>$9</strong>/ mo</small></h4></a>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="col-lg-2 col-md-3 col-sm-5 col-8 pb-3">
+                            <div class="card bg-light rounded-4 p-1">
+                                <div class="card-body text-center py-3 p-1">
+                                    <img class="mb-4" style="max-width: 100px;" src="images/Standard.svg">
+                                    <h3 class="">Premium Plan</h3>
+
+                                    <div class="ms-3 text-start small">
+                                        <div class="py-2">
+                                            <span ><i class="bi bi-check text-success"></i></span> 
+                                            <span class="small">Unlimited Bandwitch</span>
+                                            
+                                        </div>
+                                        <div class="py-2  ">
+                                            <span ><i class="bi bi-check text-success"></i></span> 
+                                            <span class="small">Encrypted Connection</span>
+                                        </div>
+                                        <div class="py-2  ">
+                                            <span ><i class="bi bi-check text-success"></i></span> 
+                                            <span class="small">No Traffic Logs</span>
+                                        </div>
+                                        <div class="py-2 ">
+                                            <span ><i class="bi bi-check text-success"></i></span> 
+                                            <span class="small">Works on All Devices</span>
+                                        </div>
+                                        <div class="py-2 ">
+                                            <span ><i class="bi bi-check text-success"></i></span> 
+                                            <span class="small">Connect Anyware</span>
+                                        </div>
+                                        <div class="py-2 ">
+                                            <span ><i class="bi bi-check text-success"></i></span> 
+                                            <span class="small">Get New Features</span>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                                <div class="text-center ">
+                                    <a class="text-decoration-none link-dark stretched-link" href="#"><h4 style="font-family: 'Rubik', sans-serif;">
+                                    <small><strong>$12</strong>/ mo</small></h4></a>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+              </section>
+
+              <!----- Plans Section End ------->
+
+              <!----- Contact Section ------->
+              <section id="contact" style="background: #E0DCDC;">
+                    <div class="row p-5 justify-content-center">
+                        <div class="col-md-5 mb-5 mb-lg-0">
+                            <h1 class="fw-bold mb-4">Subscribe Now To Get Special Features!</h1>
+                            <p>Subscribe with us and get free limitted access.</p>
+                        </div>
+                        <div class="col-md-5 d-flex justify-content-end align-items-center"> 
+                            <div><button  class="btn btn-warning btn-danger shadow-lg">Subcribe Now</button></div>
+                        </div>
+                    </div>
+              </section>
+
+              <!----- Contact Section End ------->
+
+              <!----- About Section ------->
+
+                <footer id="about" style="background: #000000;">
+                    <div class="row justify-content-center p-5 px-3 px-md-5">
+                        <div class="col-md-3 col-5">
+                            <h3 class="text-white fw-bold">VANE <span class="text-danger">VPN</span></h3>
+                            <p class="text-secondary"><strong>VANE VPN</strong> is a private virtual network that has unique features and has high security.</p>
+                       
+                            <div class="icons ">
+                                <a class="link-light h4 me-3" href="#"><i class="bi bi-facebook"></i></a>
+                                <a class="link-light h4 me-3" href="#"><i class="bi bi-twitter"></i></a>
+                                <a class="link-light h4 me-3" href="#"><i class="bi bi-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-3 col-md-2 text-secondary d-flex justify-content-end">
+                            <ul class="list-unstyled">
+                                <h5><strong>Product</strong></h5>
+                                <li ><a href="#" class="nav-link my-3">Download</a></li>
+                                <li><a href="#" class="nav-link my-3">Pricing</a></li>
+                                <li><a href="#" class="nav-link my-3">Locations</a></li>
+                                <li><a href="#" class="nav-link my-3">Server</a></li>
+                                <li><a href="#" class="nav-link my-3">Countries</a></li>
+                                <li><a href="#" class="nav-link my-3">Blog</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-2 text-secondary d-md-flex d-none justify-content-end">
+                            <ul class="list-unstyled">
+                                <h5><strong>Engage</strong></h5>
+                                <li ><a href="#" class="nav-link my-3">VPN </a></li>
+                                <li><a href="#" class="nav-link my-3">FAQ</a></li>
+                                <li><a href="#" class="nav-link my-3">Tutorials</a></li>
+                                <li><a href="#" class="nav-link my-3">About Us</a></li>
+                                <li><a href="#" class="nav-link my-3">Privacy Policy</a></li>
+                                <li><a href="#" class="nav-link my-3">Terms of Service</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-2 text-secondary d-md-flex d-none justify-content-end">
+                            <ul class="list-unstyled">
+                                <h5><strong>Earn Money</strong></h5>
+                                <li ><a href="#" class="nav-link my-3">Affiliate</a></li>
+                                <li><a href="#" class="nav-link my-3">Become Partner</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row"></div>
+
+
+                    <div class="d-flex justify-content-center p-5 border-top border-secondary border-opacity-25">
+                        <p class="m-0 text-secondary"><small>Copyright &copy; Mobin 2023 All rights Reserved.</small></p>
+                    </div>
+                </footer>
+
+              <!----- About Section End ------->
+
+
+
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</html>
