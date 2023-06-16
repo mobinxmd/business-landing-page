@@ -7,4 +7,5 @@ The project utilizes various technologies to create an engaging and responsive w
 https://mobinxmd.github.io/business-landing-page/
 
 # User InterFace:
-https://github.com/mobinxmd/business-landing-page/blob/main/the%20landing%20page%20gif.gif?raw=true
+![Uploading Untitled video - Made with Clipchamp.gif…]()
+
